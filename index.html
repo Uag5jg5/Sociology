@@ -1,69 +1,119 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Цифровой образовательный ресурс — Основы социологии и политологии</title>
-<meta name="description" content="Цифровой образовательный ресурс по дисциплине 'Основы социологии и политологии'">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
---accent:#2f6671;
---accent-2:#3f7f89;
---muted:#6b7280;
---bg:#f6f8fa;
---card:#ffffff;
---glass: rgba(255,255,255,0.06);
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-background:linear-gradient(180deg,#f3f7f8 0%, #ffffff 100%);
-color:#1f2937; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-}
-a{color:inherit}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Основы социологии и политологии</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>СОЦИОЛОГИЯ И ПОЛИТОЛОГИЯ</h1>
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#intro">Введение</a>
+      <a href="#review">Рецензия</a>
+      <a href="#rup">РУП</a>
+      <div class="dropdown">
+        <a href="#">Учебный материал ▾</a>
+        <div class="dropdown-content">
+          <a href="#lectures">Лекции</a>
+          <a href="#presentations">Презентации</a>
+          <a href="#practice">Практические задания</a>
+          <a href="#control">Контрольная работа</a>
+          <a href="#glossary">Глоссарий</a>
+          <a href="#literature">Литература</a>
+        </div>
+      </div>
+      <a href="#about">О сайте</a>
+    </nav>
+  </header>
 
-/* header */
-.topbar{background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 28px}
-.brand{display:flex;gap:14px;align-items:center}
-.logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#083047,#1b6b73);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:Playfair Display}
-.sitename{font-weight:600;font-size:18px}
+  <main>
+    <section id="home" class="active">
+      <h2>Цифровой образовательный ресурс</h2>
+      <h3>по дисциплине: «Основы социологии и политологии»</h3>
+      <p><strong>Преподаватель:</strong> Середа Вера Геннадьевна</p>
 
+      <h3>Добро пожаловать!</h3>
+      <p>
+        Данный образовательный сайт создан для студентов ТиПО и содержит материалы по дисциплине
+        «Основы социологии и политологии». Здесь собраны лекции, практические задания,
+        презентации и другие полезные материалы для изучения курса.
+      </p>
+      <p>
+        Ресурс адаптирован под любые устройства и обеспечивает удобный доступ к учебным материалам онлайн.
+      </p>
+    </section>
 
-nav{display:flex;gap:18px;align-items:center}
-.navlink{color:#e8f4f5;padding:8px 12px;border-radius:6px;text-decoration:none;position:relative}
-.navlink:hover{background:rgba(255,255,255,0.06)}
+    <section id="intro">
+      <h2>Введение</h2>
+      <p>Социология и политология изучают общество, его развитие, структуру, власть и взаимодействие людей...</p>
+    </section>
 
+    <section id="review">
+      <h2>Рецензия</h2>
+      <p>Рецензия на образовательный ресурс — пример заполнения...</p>
+    </section>
 
-/* dropdown */
-.dropdown{position:relative}
-.dropdown-menu{position:absolute;right:0;top:calc(100% + 8px);background:#3e6065;color:#fff;border-radius:6px;min-width:200px;padding:8px 6px;box-shadow:0 8px 24px rgba(15,23,42,0.25);display:none}
-.dropdown-menu a{display:block;padding:10px 12px;color:#f0f9fa;text-decoration:none;border-radius:6px}
-.dropdown-menu a:hover{background:rgba(255,255,255,0.04)}
-.dropdown.open .dropdown-menu{display:block}
+    <section id="rup">
+      <h2>Рабочий учебный план (РУП)</h2>
+      <p>Здесь можно добавить таблицу или документ РУП по дисциплине...</p>
+    </section>
 
+    <section id="lectures">
+      <h2>Лекции</h2>
+      <ul>
+        <li>Лекция 1: Введение в социологию</li>
+        <li>Лекция 2: Структура общества</li>
+        <li>Лекция 3: Политические институты</li>
+      </ul>
+    </section>
 
-/* hero */
-.hero{height:360px;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%23254f56" offset="0"/><stop stop-color="%232b6a71" offset="1"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');color:#fff;display:flex;align-items:center}
-.hero-inner{max-width:1100px;margin:0 auto;padding:36px 28px;display:flex;gap:28px;align-items:center}
-.hero-left{flex:1}
-.hero h1{font-family:Playfair Display,serif;font-weight:700;font-size:34px;margin:0 0 12px}
-.hero p.lead{margin:0;font-size:18px;opacity:0.95}
-.hero small{display:block;margin-top:18px;opacity:0.9}
+    <section id="presentations">
+      <h2>Презентации</h2>
+      <p>Ссылки на презентации в PDF или PowerPoint...</p>
+    </section>
 
+    <section id="practice">
+      <h2>Практические задания</h2>
+      <p>Примеры практических заданий для студентов...</p>
+    </section>
 
-/* layout */
-.container{max-width:1100px;margin:30px auto;padding:0 22px}
-.grid{display:grid;grid-template-columns:1fr 340px;gap:28px}
-.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    <section id="control">
+      <h2>Контрольная работа</h2>
+      <p>Варианты контрольных заданий и тестов...</p>
+    </section>
 
+    <section id="glossary">
+      <h2>Глоссарий</h2>
+      <ul>
+        <li><strong>Социология</strong> — наука об обществе и социальных отношениях.</li>
+        <li><strong>Политология</strong> — наука о политике, власти и управлении.</li>
+      </ul>
+    </section>
 
-/* menu for mobile */
-.hamburger{display:none;background:transparent;border:0;color:#fff;font-size:20px}
+    <section id="literature">
+      <h2>Литература</h2>
+      <p>1. Гидденс Э. Социология.<br>2. Даль Р. Современная политическая теория.</p>
+    </section>
 
+    <section id="about">
+      <h2>О сайте</h2>
+      <p>
+        Цифровой образовательный ресурс Середы Веры Геннадьевны,  
+        Высший колледж «ASTANA POLYTECHNIC» акимата города Астаны.
+      </p>
+      <p>© 2023г. Все права защищены.</p>
+    </section>
+  </main>
 
-/* content sections */
-section{animation:fadein .35s ease;min-height:260px}
+  <footer>
+    © 2023. Цифровой образовательный ресурс Середы Веры Геннадьевны,  
+    Высший колледж «ASTANA POLYTECHNIC» акимата города Астаны.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
