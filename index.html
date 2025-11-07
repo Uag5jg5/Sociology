@@ -1,51 +1,69 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Основы социологии и политологии</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body class="home">
-  <header>
-    <nav class="navbar">
-      <div class="logo">СОЦИОЛОГИЯ И ПОЛИТОЛОГИЯ</div>
-      <ul class="menu">
-        <li><a href="index.html" class="active">Главная</a></li>
-        <li><a href="vvedenie.html">Введение</a></li>
-        <li><a href="recenziya.html">Рецензия</a></li>
-        <li><a href="rup.html">РУП</a></li>
-        <li><a href="material.html">Учебный материал</a></li>
-        <li><a href="about.html">О сайте</a></li>
-      </ul>
-    </nav>
-  </header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Цифровой образовательный ресурс — Основы социологии и политологии</title>
+<meta name="description" content="Цифровой образовательный ресурс по дисциплине 'Основы социологии и политологии'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--accent:#2f6671;
+--accent-2:#3f7f89;
+--muted:#6b7280;
+--bg:#f6f8fa;
+--card:#ffffff;
+--glass: rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+background:linear-gradient(180deg,#f3f7f8 0%, #ffffff 100%);
+color:#1f2937; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+a{color:inherit}
 
-  <main class="container fade-in">
-    <section class="intro">
-      <h1>Цифровой образовательный ресурс</h1>
-      <h2>по дисциплине: «Основы социологии и политологии»</h2>
-      <p>Преподаватель: Середа Вера Геннадьевна</p>
-    </section>
 
-    <section class="text-block">
-      <h3>Добро пожаловать!</h3>
-      <p>
-        Данный образовательный сайт создан для студентов ТиПО и содержит материалы по дисциплине
-        «Основы социологии и политологии». Здесь собраны лекции, практические задания,
-        презентации и другие полезные материалы для изучения курса.
-      </p>
-      <p>
-        Ресурс адаптирован под любые устройства и обеспечивает удобный доступ к учебным материалам онлайн.
-      </p>
-    </section>
-  </main>
+/* header */
+.topbar{background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 28px}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#083047,#1b6b73);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-family:Playfair Display}
+.sitename{font-weight:600;font-size:18px}
 
-  <footer>
-    <p>
-      Цифровой образовательный ресурс Середы Веры Геннадьевны, Высший колледж «ASTANA POLYTECHNIC» акимата города Астаны<br>
-      © 2023. Все права защищены.
-    </p>
-  </footer>
-</body>
-</html>
+
+nav{display:flex;gap:18px;align-items:center}
+.navlink{color:#e8f4f5;padding:8px 12px;border-radius:6px;text-decoration:none;position:relative}
+.navlink:hover{background:rgba(255,255,255,0.06)}
+
+
+/* dropdown */
+.dropdown{position:relative}
+.dropdown-menu{position:absolute;right:0;top:calc(100% + 8px);background:#3e6065;color:#fff;border-radius:6px;min-width:200px;padding:8px 6px;box-shadow:0 8px 24px rgba(15,23,42,0.25);display:none}
+.dropdown-menu a{display:block;padding:10px 12px;color:#f0f9fa;text-decoration:none;border-radius:6px}
+.dropdown-menu a:hover{background:rgba(255,255,255,0.04)}
+.dropdown.open .dropdown-menu{display:block}
+
+
+/* hero */
+.hero{height:360px;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%23254f56" offset="0"/><stop stop-color="%232b6a71" offset="1"/></linearGradient></defs><rect width="100%" height="100%" fill="url(%23g)"/></svg>');color:#fff;display:flex;align-items:center}
+.hero-inner{max-width:1100px;margin:0 auto;padding:36px 28px;display:flex;gap:28px;align-items:center}
+.hero-left{flex:1}
+.hero h1{font-family:Playfair Display,serif;font-weight:700;font-size:34px;margin:0 0 12px}
+.hero p.lead{margin:0;font-size:18px;opacity:0.95}
+.hero small{display:block;margin-top:18px;opacity:0.9}
+
+
+/* layout */
+.container{max-width:1100px;margin:30px auto;padding:0 22px}
+.grid{display:grid;grid-template-columns:1fr 340px;gap:28px}
+.card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+
+
+/* menu for mobile */
+.hamburger{display:none;background:transparent;border:0;color:#fff;font-size:20px}
+
+
+/* content sections */
+section{animation:fadein .35s ease;min-height:260px}
