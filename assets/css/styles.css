@@ -1,71 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
+  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
   min-height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  transition: background 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Фон для каждой страницы */
-body.home {
-  background-image: url("../images/home-bg.jpg");
-}
-body.materials {
-  background-image: url("../images/materials-bg.jpg");
-}
-body.about {
-  background-image: url("../images/about-bg.jpg");
-}
-body.contact {
-  background-image: url("../images/contact-bg.jpg");
-}
-
-/* Навигация */
-.navbar {
+header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 50, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  z-index: 10;
-  backdrop-filter: blur(5px);
+  padding: 15px 40px;
 }
-.navbar ul {
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f8f8f8;
+  letter-spacing: 1px;
+}
+
+.menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
-.navbar a {
-  text-decoration: none;
+
+.menu li a {
   color: #fff;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-.navbar a:hover, .navbar a.active {
-  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* Контент */
-main {
+.menu li a:hover,
+.menu li a.active {
+  color: #ffcc00;
+}
+
+.content {
   margin-top: 100px;
-  text-align: center;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
+  padding: 40px 80px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: fadeIn 1.5s ease-in-out;
+  align-self: center;
+  animation: fadeIn 1.5s ease-in;
 }
 
-/* Анимация */
+h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #f5f5f5;
+}
+
+footer {
+  background: rgba(0, 0, 50, 0.8);
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
