@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background 1s ease-in-out;
+}
+
+/* Фон для каждой страницы */
+body.home {
+  background-image: url("../images/home-bg.jpg");
+}
+body.materials {
+  background-image: url("../images/materials-bg.jpg");
+}
+body.about {
+  background-image: url("../images/about-bg.jpg");
+}
+body.contact {
+  background-image: url("../images/contact-bg.jpg");
+}
+
+/* Навигация */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.navbar a:hover, .navbar a.active {
+  color: #00bcd4;
+}
+
+/* Контент */
+main {
+  margin-top: 100px;
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
